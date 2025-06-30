@@ -25,6 +25,12 @@ registerApplication({
   activeWhen: ["/agenda"],
 });
 
+registerApplication({
+  name: "@mfe/sidebar",
+  app: () => System.import<LifeCycles>("@mfe/sidebar"),
+  activeWhen: ["/sidebar"],
+});
+
 start({
   urlRerouteOnly: true,
 });
