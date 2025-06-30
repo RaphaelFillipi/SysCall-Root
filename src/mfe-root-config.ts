@@ -31,6 +31,12 @@ registerApplication({
   activeWhen: ["/sidebar"],
 });
 
+registerApplication({
+  name: "@mfe/profile",
+  app: () => System.import<LifeCycles>("@mfe/profile"),
+  activeWhen: ["/profile"],
+});
+
 start({
   urlRerouteOnly: true,
 });
