@@ -15,10 +15,6 @@ registerApplication({
   activeWhen: ["/auth"],
 });
 
-start({
-  urlRerouteOnly: true,
-});
-
 registerApplication({
   name: "@mfe/agenda",
   app: () => System.import<LifeCycles>("@mfe/agenda"),
@@ -35,6 +31,12 @@ registerApplication({
   name: "@mfe/profile",
   app: () => System.import<LifeCycles>("@mfe/profile"),
   activeWhen: ["/profile"],
+});
+
+registerApplication({
+  name: "@mfe/call-history",
+  app: () => System.import<LifeCycles>("@mfe/call-history"),
+  activeWhen: ["/history"],
 });
 
 start({
